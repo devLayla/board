@@ -28,7 +28,7 @@ class ReplyServiceTest {
     @Test
     public void 댓글작성_테스트() throws Exception {
         Member member = Member.builder()
-                .user_id("asdf1234")
+                .userid("asdf1234")
                 .password("asdf")
                 .name("김철수")
                 .build();
@@ -63,7 +63,7 @@ class ReplyServiceTest {
     @Test
     public void 댓글추천_테스트() throws Exception {
         Member member = Member.builder()
-                .user_id("asdf1234")
+                .userid("asdf1234")
                 .password("asdf")
                 .name("김철수")
                 .build();

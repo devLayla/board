@@ -20,7 +20,7 @@ public class Member {
     @Column(name = "member_id")
     private Long id;
 
-    private String user_id;
+    private String userid;
 
     private String password;
 
@@ -33,8 +33,8 @@ public class Member {
     private List<Reply> replyList = new ArrayList<>();
 
     @Builder
-    public Member(String user_id, String password, String name){
-        this.user_id = user_id;
+    public Member(String userid, String password, String name){
+        this.userid = userid;
         this.password = password;
         this.name = name;
     }

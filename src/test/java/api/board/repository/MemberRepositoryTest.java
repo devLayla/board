@@ -16,7 +16,7 @@ class MemberRepositoryTest {
     @Test
     public void 회원가입테스트() throws Exception {
         Member member = Member.builder()
-                .user_id("asdf12")
+                .userid("asdf12")
                 .password("asdf")
                 .name("김철수")
                 .build();
