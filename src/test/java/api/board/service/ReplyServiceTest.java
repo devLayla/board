@@ -1,5 +1,6 @@
 package api.board.service;
 
+import api.board.controller.web.PostSaveDto;
 import api.board.domain.*;
 import api.board.repository.InterestRepository;
 import api.board.repository.MemberRepository;
@@ -34,7 +35,7 @@ class ReplyServiceTest {
                 .build();
         memberRepository.save(member);
 
-        Posts posts = Posts.builder()
+        PostSaveDto posts = PostSaveDto.builder()
                 .title("글 제목 입니다")
                 .content("글 내용 입니다")
                 .writeDateTime(LocalDateTime.now())
@@ -47,7 +48,7 @@ class ReplyServiceTest {
                 .content("댓글입력테스트")
                 .member(member)
                 .writeDateTime(LocalDateTime.now())
-                .post(posts)
+                .post(posts.toEntity())
                 .interested(interested)
                 .build();
 
@@ -69,7 +70,7 @@ class ReplyServiceTest {
                 .build();
         memberRepository.save(member);
 
-        Posts posts = Posts.builder()
+        PostSaveDto posts = PostSaveDto.builder()
                 .title("글 제목 입니다")
                 .content("글 내용 입니다")
                 .writeDateTime(LocalDateTime.now())
@@ -82,7 +83,7 @@ class ReplyServiceTest {
                 .content("댓글입력테스트")
                 .member(member)
                 .writeDateTime(LocalDateTime.now())
-                .post(posts)
+                .post(posts.toEntity())
                 .interested(interested)
                 .build();
 

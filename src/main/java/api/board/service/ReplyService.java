@@ -1,9 +1,7 @@
 package api.board.service;
 
 import api.board.domain.INTEREST;
-import api.board.domain.Interested;
 import api.board.domain.Reply;
-import api.board.repository.InterestRepository;
 import api.board.repository.ReplyRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

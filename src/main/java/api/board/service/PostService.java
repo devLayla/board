@@ -1,5 +1,6 @@
 package api.board.service;
 
+import api.board.controller.web.PostSaveDto;
 import api.board.domain.Posts;
 import api.board.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
@@ -13,8 +14,8 @@ public class PostService {
 
     private final PostRepository postRepository;
 
-    public Long save(Posts posts){
-        Posts save = postRepository.save(posts);
+    public Long save(PostSaveDto PostSaveDto){
+        Posts save = postRepository.save(PostSaveDto.toEntity());
         return save.getId();
     }
 
@@ -25,6 +26,8 @@ public class PostService {
     public List<Posts> findAll(){
         return postRepository.findAll();
     }
+
+
 
 
 }
