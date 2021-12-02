@@ -38,3 +38,4 @@ out/
 
 ### RESOURCE ###
 .yaml
+/src/main/resources/application.yaml
